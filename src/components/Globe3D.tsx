@@ -142,8 +142,8 @@ export function Globe3D({ className = "" }: { className?: string }) {
         if (i === 0) ctx.moveTo(px, py);
         else ctx.lineTo(px, py);
       }
-      ctx.strokeStyle = `rgba(${GREY}, 0.22)`;
-      ctx.lineWidth = 1;
+      ctx.strokeStyle = `rgba(${GREY}, 0.32)`;
+      ctx.lineWidth = 2.5 * (R / 220);
       ctx.stroke();
 
       // Satellite + trail — the orbiting "airplane"

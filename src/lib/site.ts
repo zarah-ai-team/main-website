@@ -81,10 +81,14 @@ export const hero = {
 // ---- THE PROBLEM (positioning section) ------------------------------------
 export const problem = {
   headline: "Your business is one of a kind. Your software shouldn't be off-the-shelf.",
-  body: [
-    "Generic tools promise everything and fit no one. You bend your process to match the software, juggle subscriptions that don't talk to each other, and burn hours on manual work — while AI stays stuck in demo mode.",
-    "Zarah AI builds the alternative: websites, AI, and CRM/ERP systems designed around your workflows, your data, and your goals — with AI built in where it creates real leverage.",
+  lead: "Generic tools promise everything and fit no one.",
+  pains: [
+    { icon: "expand", text: "Processes bent to fit rigid software" },
+    { icon: "disconnect", text: "Subscriptions that don't talk to each other" },
+    { icon: "clock", text: "Hours lost to manual, repetitive work" },
+    { icon: "sparkles", text: "AI that never leaves demo mode" },
   ],
+  fix: "Zarah AI builds the alternative — systems designed around your workflows, your data, and your goals, with AI where it creates real leverage.",
 } as const;
 
 // ---- SERVICES — "What we build" -------------------------------------------
@@ -220,6 +224,11 @@ export const projects = [
     name: "Liberty India",
     category: "Travel · Destination Management",
     url: "https://liberty-india.com/",
+    logo: "/logo-liberty-india.svg",
+    logoHeight: 34,
+    // Real asset is 120x120 (square)
+    logoAspect: 1,
+    logoIncludesWordmark: false,
     tagline: "A premium destination-management platform for curated journeys across India.",
     summary:
       "A B2B gateway where tour operators, travel advisors, and corporate buyers commission bespoke India programs — built around authentic access, on-ground precision, and seamless execution.",
@@ -239,6 +248,11 @@ export const projects = [
     name: "Book United Hotels",
     category: "Hospitality · Booking Platform",
     url: "https://bookunitedhotels.com/",
+    logo: "/logo-united-hotels.png",
+    logoHeight: 42,
+    // Real asset is 372x151 (full lockup: icon + wordmark + tagline)
+    logoAspect: 372 / 151,
+    logoIncludesWordmark: true,
     tagline: "A specialist hotel-booking and B2B distribution platform for Turkey.",
     summary:
       "A dual-purpose platform serving both individual travelers and travel-industry professionals — offering direct rates and verified rooms across Istanbul and beyond, competing on specialization rather than scale.",
@@ -276,20 +290,35 @@ export const values = [
   {
     title: "Fit beats features",
     body: "Software that matches your business beats a bigger feature list you'll never use.",
+    icon: "layers",
   },
   {
     title: "Ship, don't demo",
     body: "AI only matters when it's running in production and creating real value.",
+    icon: "sparkles",
   },
   {
     title: "You own it",
     body: "Your code, your data, your IP — always.",
+    icon: "key",
   },
   {
     title: "Partners, not vendors",
     body: "We build for the long term and stay to support what we ship.",
+    icon: "users",
   },
 ] as const;
+
+// ---- ORIGIN (about page — "why we started") --------------------------------
+export const origin = {
+  lead: "Most businesses aren't held back by ambition — they're held back by tools that don't fit.",
+  pains: [
+    { icon: "expand", text: "Processes bent to match someone else's software" },
+    { icon: "disconnect", text: "Subscriptions that don't talk to each other" },
+    { icon: "sparkles", text: "AI that never makes it past the demo" },
+  ],
+  fix: "Zarah AI was founded to build the alternative: custom systems engineered around how a business actually runs — with senior engineers building and AI woven in where it creates real leverage.",
+} as const;
 
 // ---- FINAL CTA (the money block) ------------------------------------------
 export const finalCta = {

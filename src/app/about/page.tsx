@@ -5,8 +5,9 @@ import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { CtaBand } from "@/components/CtaBand";
 import { Tilt } from "@/components/Tilt";
-import { Icon } from "@/components/Icon";
-import { values, stats } from "@/lib/site";
+import { Icon, type IconName } from "@/components/Icon";
+import { PainPoints } from "@/components/PainPoints";
+import { values, stats, origin } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About | Custom Software & AI Engineering",
@@ -31,30 +32,23 @@ export default function AboutPage() {
       <section className="section">
         <div className="container grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-7">
-            <div className="space-y-5 text-base leading-relaxed text-muted">
-              <p>
-                Most businesses aren&apos;t held back by ambition — they&apos;re
-                held back by tools that don&apos;t fit. Processes bent to match
-                someone else&apos;s software. Five subscriptions that don&apos;t
-                talk to each other. Manual work a system should handle. And AI
-                that never makes it past the demo.
-              </p>
-              <p>
-                <span className="text-content">Zarah AI</span> was founded to
-                build the alternative: custom websites, AI solutions, and
-                CRM/ERP systems engineered around how a business actually runs
-                — with senior engineers doing the building and AI woven in
-                where it creates real leverage.
-              </p>
-              <p>
-                We&apos;ve shipped production platforms for travel and
-                hospitality clients like{" "}
-                <span className="text-content">Liberty India</span> and{" "}
-                <span className="text-content">Book United Hotels</span> — and
-                the same discipline drives every build: understand the
-                business first, then build the system that fits it.
-              </p>
-            </div>
+            <p className="text-base leading-relaxed text-muted">
+              {origin.lead}
+            </p>
+
+            <PainPoints items={origin.pains} className="mt-5" />
+
+            <p className="mt-6 text-base leading-relaxed text-muted">
+              {origin.fix}
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-muted">
+              We&apos;ve shipped production platforms for clients like{" "}
+              <span className="text-content">Liberty India</span> and{" "}
+              <span className="text-content">Book United Hotels</span> —
+              understand the business first, then build the system that fits
+              it.
+            </p>
+
             <Link href="/contact" className="btn-primary mt-8">
               Build with us
               <Icon name="arrow" className="h-4 w-4" />
@@ -93,7 +87,10 @@ export default function AboutPage() {
               <Reveal key={v.title} delay={(i % 2) * 90}>
                 <Tilt className="h-full">
                   <div className="card h-full">
-                    <h3 className="text-lg font-semibold">{v.title}</h3>
+                    <span className="grid h-12 w-12 place-items-center rounded-lg bg-carbon-900 text-accent">
+                      <Icon name={v.icon as IconName} className="h-6 w-6" />
+                    </span>
+                    <h3 className="mt-5 text-lg font-semibold">{v.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted">
                       {v.body}
                     </p>

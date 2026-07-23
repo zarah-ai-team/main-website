@@ -17,7 +17,13 @@ export function ProjectCard({ project }: { project: Project }) {
       <article className="card card-featured flex h-full flex-col overflow-hidden !p-0">
         {/* Visual */}
         <div className="relative aspect-[16/10]">
-          <SiteWireframe name={project.name} url={project.url} />
+          <SiteWireframe
+            name={project.name}
+            url={project.url}
+            logo={project.logo}
+            logoHeight={project.logoHeight}
+            logoAspect={project.logoAspect}
+          />
         </div>
 
         {/* Body */}

@@ -1,9 +1,25 @@
+import Image from "next/image";
+
 /**
  * A stylized "site skeleton" visual used as the case-study placeholder until
  * real screenshots are added. Solid carbon blocks + one yellow action per
  * view — stays inside the design system (plain surfaces, no gradients).
+ * When a real client logo is available, it's featured in the mock hero.
  */
-export function SiteWireframe({ name, url }: { name: string; url: string }) {
+export function SiteWireframe({
+  name,
+  url,
+  logo,
+  logoHeight = 40,
+  logoAspect = 1,
+}: {
+  name: string;
+  url: string;
+  logo?: string;
+  logoHeight?: number;
+  logoAspect?: number;
+}) {
+  const logoWidth = Math.round(logoHeight * logoAspect);
   return (
     <div className="relative flex h-full w-full flex-col overflow-hidden bg-carbon-900">
       {/* Browser chrome */}
@@ -29,9 +45,20 @@ export function SiteWireframe({ name, url }: { name: string; url: string }) {
         </div>
         {/* hero */}
         <div className="mt-2 flex flex-1 flex-col justify-center gap-2.5 rounded-lg bg-carbon-800 p-5">
-          <span className="text-lg font-semibold text-content md:text-xl">
-            {name}
-          </span>
+          {logo ? (
+            <Image
+              src={logo}
+              alt={`${name} logo`}
+              width={logoWidth}
+              height={logoHeight}
+              className="self-start"
+              style={{ height: logoHeight, width: logoWidth }}
+            />
+          ) : (
+            <span className="text-lg font-semibold text-content md:text-xl">
+              {name}
+            </span>
+          )}
           <span className="h-2 w-3/4 rounded-full bg-carbon-600" />
           <span className="h-2 w-1/2 rounded-full bg-carbon-600/60" />
           <span className="mt-2 h-7 w-24 rounded-md bg-accent" />

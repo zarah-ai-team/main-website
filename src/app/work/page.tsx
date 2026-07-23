@@ -4,6 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { Icon } from "@/components/Icon";
 import { CtaBand } from "@/components/CtaBand";
 import { SiteWireframe } from "@/components/SiteWireframe";
+import { ClientLogo } from "@/components/ClientLogo";
 import { Tilt } from "@/components/Tilt";
 import { projects } from "@/lib/site";
 
@@ -37,13 +38,20 @@ export default function WorkPage() {
               <Reveal className={i % 2 === 1 ? "lg:order-2" : ""}>
                 <Tilt>
                   <div className="card card-featured aspect-[4/3] overflow-hidden !p-0">
-                    <SiteWireframe name={p.name} url={p.url} />
+                    <SiteWireframe
+                      name={p.name}
+                      url={p.url}
+                      logo={p.logo}
+                      logoHeight={p.logoHeight}
+                      logoAspect={p.logoAspect}
+                    />
                   </div>
                 </Tilt>
               </Reveal>
 
               {/* Copy */}
               <Reveal delay={100} className={i % 2 === 1 ? "lg:order-1" : ""}>
+                <ClientLogo project={p} className="mb-4" showName={false} />
                 <span className="text-xs font-medium uppercase tracking-[0.12em] text-muted">
                   {p.category}
                 </span>

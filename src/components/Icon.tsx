@@ -19,7 +19,9 @@ export type IconName =
   | "mail"
   | "whatsapp"
   | "menu"
-  | "close";
+  | "close"
+  | "clock"
+  | "disconnect";
 
 const paths: Record<IconName, JSX.Element> = {
   bolt: <path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z" />,
@@ -102,6 +104,19 @@ const paths: Record<IconName, JSX.Element> = {
   ),
   menu: <path d="M4 6h16M4 12h16M4 18h16" />,
   close: <path d="M6 6l12 12M18 6 6 18" />,
+  clock: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7.5V12l3.2 2" />
+    </>
+  ),
+  disconnect: (
+    <>
+      <circle cx="5" cy="12" r="3" />
+      <circle cx="19" cy="12" r="3" />
+      <path d="M9.5 12h1.4M13.1 12h1.4" strokeDasharray="2.4 3" />
+    </>
+  ),
 };
 
 export function Icon({

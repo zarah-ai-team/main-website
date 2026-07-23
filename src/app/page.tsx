@@ -8,6 +8,8 @@ import { CtaBand } from "@/components/CtaBand";
 import { Globe3D } from "@/components/Globe3D";
 import { Tilt } from "@/components/Tilt";
 import { RotatingText } from "@/components/RotatingText";
+import { ClientLogo } from "@/components/ClientLogo";
+import { PainPoints } from "@/components/PainPoints";
 import {
   hero,
   problem,
@@ -89,9 +91,9 @@ export default function HomePage() {
                   href={p.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base font-semibold text-content/70 transition-colors duration-120 ease-out hover:text-content"
+                  className="opacity-70 transition-opacity duration-120 ease-out hover:opacity-100"
                 >
-                  {p.name}
+                  <ClientLogo project={p} />
                 </a>
               ))}
             </div>
@@ -124,11 +126,15 @@ export default function HomePage() {
             </h2>
           </Reveal>
           <Reveal delay={120} className="lg:col-span-7">
-            <div className="space-y-5 text-base leading-relaxed text-muted">
-              {problem.body.map((paragraph) => (
-                <p key={paragraph.slice(0, 24)}>{paragraph}</p>
-              ))}
-            </div>
+            <p className="text-base leading-relaxed text-muted">
+              {problem.lead}
+            </p>
+
+            <PainPoints items={problem.pains} className="mt-5" />
+
+            <p className="mt-6 text-base leading-relaxed text-muted">
+              {problem.fix}
+            </p>
             <Link
               href="/services"
               className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent transition-colors duration-120 ease-out hover:text-accent-hover"

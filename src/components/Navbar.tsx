@@ -96,7 +96,7 @@ export function Navbar() {
             ))}
             <li className="mt-2 px-1">
               <Link href="/contact" className="btn-primary w-full">
-                Get in touch
+                Book a Free Consultation
                 <Icon name="arrow" className="h-4 w-4" />
               </Link>
             </li>
