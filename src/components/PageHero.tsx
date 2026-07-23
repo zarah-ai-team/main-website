@@ -13,7 +13,7 @@ export function PageHero({
           width limits live on the text, not the wrapper. */}
       <div className="container flex flex-col items-start gap-5 pb-6">
         <Reveal>
-          <h1 className="max-w-4xl text-3xl font-semibold leading-[1.12] md:text-4xl lg:text-5xl">
+          <h1 className="max-w-4xl text-balance text-3xl font-semibold leading-[1.12] md:text-4xl lg:text-5xl">
             {title}
           </h1>
         </Reveal>

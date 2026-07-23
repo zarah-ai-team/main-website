@@ -18,7 +18,7 @@ export function CtaBand({
     <section className="section">
       <div className="container">
         <Reveal className="relative overflow-hidden rounded-xl bg-accent p-8 text-center text-carbon-900 shadow-brand-lg md:p-16">
-          <h2 className="mx-auto max-w-2xl text-2xl font-semibold leading-tight md:text-3xl">
+          <h2 className="mx-auto max-w-2xl text-balance text-2xl font-semibold leading-tight md:text-3xl">
             {title}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm text-carbon-900/80 md:text-base">

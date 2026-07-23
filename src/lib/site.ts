@@ -250,8 +250,8 @@ export const projects = [
     url: "https://bookunitedhotels.com/",
     logo: "/logo-united-hotels.png",
     logoHeight: 42,
-    // Real asset is 372x151 (full lockup: icon + wordmark + tagline)
-    logoAspect: 372 / 151,
+    // White lockup (icon + wordmark + tagline), asset 460x160
+    logoAspect: 460 / 160,
     logoIncludesWordmark: true,
     tagline: "A specialist hotel-booking and B2B distribution platform for Turkey.",
     summary:

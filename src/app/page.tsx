@@ -34,7 +34,7 @@ export default function HomePage() {
           {/* Copy */}
           <div className="flex flex-col items-start">
             <Reveal delay={80}>
-              <h1 className="text-3xl font-semibold leading-[1.12] md:text-5xl lg:text-[52px] lg:leading-[60px]">
+              <h1 className="text-balance text-3xl font-semibold leading-[1.12] md:text-5xl lg:text-[52px] lg:leading-[60px]">
                 {hero.headline.lead}
                 <span className="text-accent">{hero.headline.accent}</span>
               </h1>
@@ -121,7 +121,7 @@ export default function HomePage() {
       <section className="section">
         <div className="container grid gap-10 lg:grid-cols-12">
           <Reveal className="lg:col-span-5">
-            <h2 className="text-2xl font-semibold leading-tight md:text-3xl lg:text-4xl">
+            <h2 className="text-balance text-2xl font-semibold leading-tight md:text-3xl lg:text-4xl">
               {problem.headline}
             </h2>
           </Reveal>
@@ -200,7 +200,7 @@ export default function HomePage() {
       <section className="section">
         <div className="container">
           <SectionHeading
-            title="The Zarah Build Process: Discover → Design → Build → Scale"
+            title={"The Zarah Build Process: Discover → Design → Build → Scale"}
             subtitle={processIntro}
           />
 

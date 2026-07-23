@@ -57,7 +57,7 @@ export default function ServicesPage() {
       <section className="section bg-carbon-800/40">
         <div className="container">
           <SectionHeading
-            title="The Zarah Build Process: Discover → Design → Build → Scale"
+            title="The Zarah Build Process: Discover → Design → Build → Scale"
             subtitle={processIntro}
           />
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
